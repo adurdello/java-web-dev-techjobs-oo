@@ -96,14 +96,14 @@ public class Job {
     }
 
     public String toString() {
-        return Job;
-//        return "\n" +
-//                "ID: " + id + "\n" +
-//                "Name: " + name + "\n" +
-//                "Employer: " + employer + "\n" +
-//                "Location: " + location + "\n" +
-//                "Position Type: " + positionType + "\n" +
-//                "Core Competency: " + coreCompetency + "\n" +
-//                "\n";
+//      return "\n" + "text" + "\n";
+        String jobInfo =
+                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: " + coreCompetency;
+        return "\n" + jobInfo + "\n";
     }
 }
