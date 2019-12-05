@@ -49,7 +49,9 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+    public static final String ANSI_RESET = "\u001B[0m";
 
+    public static final String RED_BOLD = "\033[1;31m";    // RED
 
     public int getId() {
         return id;
@@ -96,7 +98,7 @@ public class Job {
     }
 
     public String toString() {
-        String jobData = "ID: " + this.getId() + "\n";
+        String jobData = "ID: " + RED_BOLD + this.getId() + ANSI_RESET + "\n";
 
         if (!this.name.isEmpty()){
             jobData += "Name: " + this.name + "\n";
