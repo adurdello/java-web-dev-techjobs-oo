@@ -103,29 +103,29 @@ public class Job {
         } else {
             jobData += "Name: Data not available" + "\n";
         }
-        if (getEmployer() == null){
+        if (this.employer.getValue().isEmpty()){
             jobData += "Employer: Data not available" + "\n";
         } else {
             jobData += "Employer: " + this.employer + "\n";
         }
-        if (this.location == null){
+        if (this.location.getValue().isEmpty()){
             jobData += "Location: Data not available" + "\n";
         } else {
             jobData += "Location: " + this.location + "\n";
         }
-        if (this.positionType == null){
+        if (this.positionType.getValue().isEmpty()){
             jobData += "Position Type: Data not available" + "\n";
         } else {
             jobData += "Position Type: " + this.positionType + "\n";
         }
-        if (this.coreCompetency == null){
+        if (this.coreCompetency.getValue().isEmpty()){
             jobData += "Core Competency: Data not available" + "\n";
         } else {
             jobData += "Core Competency: " + this.coreCompetency;
         }
-//        if (this.name == null && this.employer == null && this.location == null && this.positionType == null && this.coreCompetency == null) {
-//            jobData = "OOPS! This job does not seem to exist.";
-//        }
+        if (this.name.isEmpty() && this.employer.getValue().isEmpty() && this.location.getValue().isEmpty() && this.positionType.getValue().isEmpty() && this.coreCompetency.getValue().isEmpty()) {
+            jobData = "OOPS! This job does not seem to exist.";
+        }
 
         return "\n" + jobData + "\n";
     }
