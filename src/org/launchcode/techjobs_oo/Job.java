@@ -96,14 +96,37 @@ public class Job {
     }
 
     public String toString() {
-//      return "\n" + "text" + "\n";
-        String jobInfo =
-                "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer + "\n" +
-                "Location: " + location + "\n" +
-                "Position Type: " + positionType + "\n" +
-                "Core Competency: " + coreCompetency;
-        return "\n" + jobInfo + "\n";
+        String jobData = "ID: " + this.getId() + "\n";
+
+        if (!this.name.isEmpty()){
+            jobData += "Name: " + this.name + "\n";
+        } else {
+            jobData += "Name: Data not available" + "\n";
+        }
+        if (getEmployer() == null){
+            jobData += "Employer: Data not available" + "\n";
+        } else {
+            jobData += "Employer: " + this.employer + "\n";
+        }
+        if (this.location == null){
+            jobData += "Location: Data not available" + "\n";
+        } else {
+            jobData += "Location: " + this.location + "\n";
+        }
+        if (this.positionType == null){
+            jobData += "Position Type: Data not available" + "\n";
+        } else {
+            jobData += "Position Type: " + this.positionType + "\n";
+        }
+        if (this.coreCompetency == null){
+            jobData += "Core Competency: Data not available" + "\n";
+        } else {
+            jobData += "Core Competency: " + this.coreCompetency;
+        }
+//        if (this.name == null && this.employer == null && this.location == null && this.positionType == null && this.coreCompetency == null) {
+//            jobData = "OOPS! This job does not seem to exist.";
+//        }
+
+        return "\n" + jobData + "\n";
     }
 }
